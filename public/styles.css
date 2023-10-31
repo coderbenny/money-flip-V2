@@ -95,33 +95,43 @@ input{
 }
 
 .live-rates{
-    background-image: url(./assets/shubham-s-web3-Vtm64FggqeQ-unsplash.svg);
+    background-image: url(./assets/9\ -\ ECONOMY\ ANALYSIS.svg);
     background-position: center;
     background-size: cover;
     /* background-color: #eee1d7; */
-    padding: 20px;
-
-table{
-    padding: 20px;
-    background-color: #fd9c00;
+    padding: 50px;
 }
 
 .news-card{ 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: row;
-    background-color: #eee1d7;
+    /* background-color: #eee1d7; */
+    padding-left: 0;
 }
 
-.first-currency{
-    margin-right: 20px;
+p{
+    position: absolute;
+    padding: 9px 0 0 35px;
+}
+
+table{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+}
+
+.first-currency, .second-currency{
+    margin-right: 40px;
+    margin-left: 20px;
 }
 
 table{
     font-size: 20px;
 }
-tr{
-    background-color: white;
+
+td{
+    padding: 10px;
 }
 
 
