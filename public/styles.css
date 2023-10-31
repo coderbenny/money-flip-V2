@@ -151,6 +151,17 @@ td {
     color: #fd9c00;
 }
 
+.form{
+    margin-left: 20px;
+    display: flex;
+    width: 300px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
 
 /* Media query to adjust styles for smaller screens */
 @media screen and (max-width: 768px) {
