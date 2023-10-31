@@ -210,28 +210,50 @@
     <!-- section three-->
     <div class="section-three">
         <h1 style="margin-left: 20px;">Leave a Review</h1>
-        <div class="form">
-            <form action="" method="">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="rating">Rating:</label>
-                <select id="rating" name="rating">
-                    <option value="5">5 Stars</option>
-                    <option value="4">4 Stars</option>
-                    <option value="3">3 Stars</option>
-                    <option value="2">2 Stars</option>
-                    <option value="1">1 Star</option>
-                </select>
-    
-                <label for="review">Your Review:</label>
-                <textarea id="review" name="review" rows="4" required></textarea>
-    
-                <button type="submit">Submit Review</button>
-            </form>
+        <div class="form-wrapper">
+
+            <div class="form">
+                <form action="" method="" id="review">
+                    <div class="element">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div>
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" cols="25" rows="7" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-review">Submit Review</button>
+                </form>
+
+                <div class="reviews">
+                    <div class="fReview">
+                        <h1>NAME</h1>
+                        <p>I am a Developer! I Love this site</p>
+                    </div>
+                    <div class="fReview">
+                        <h1>NAME2</h1>
+                        <p>I am a Developer2! I Love this site</p>
+                    </div>
+                    <div class="fReview">
+                        <h1>NAME2</h1>
+                        <p>I am a Developer2! I Love this site</p>
+                    </div>
+                    <div class="fReview">
+                        <h1>NAME2</h1>
+                        <p>I am a Developer2! I Love this site</p>
+                    </div>
+                    <div class="fReview">
+                        <h1>NAME2</h1>
+                        <p>I am a Developer2! I Love this site</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
