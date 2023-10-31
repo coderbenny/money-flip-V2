@@ -20,7 +20,7 @@
 .top-page a {
     text-decoration: none;
     color: black;
-    padding-left: 10px;
+    margin-right: 70px;
 }
 
 h4 {
@@ -164,6 +164,23 @@ td {
 
 .section-three{
     padding: 50px;
+    background-color: #f38b4b;
+}
+
+.feedback{
+    display: flex;
+    /* justify-content: space-between;
+    align-items: flex-start; */
+}
+
+h2{
+    font-size: 30px;
+    margin-left: 20px;
+    padding-bottom: 15px;
+}
+
+.feedback h1{
+    padding-left: 450px;
 }
 
 /* .form-wrapper{ */
@@ -184,7 +201,9 @@ form #review{
 
 .reviews{
     display: flex;
-    padding: 10px;
+    padding: 20px 40px 20px 0;
+    background-color: yellow;
+    margin-left: 30px;
 }
 
 .fReview{
@@ -194,11 +213,15 @@ form #review{
     padding: 20px;
     /* margin-bottom: 20px;*/
     margin-left: 50px; 
-    /* text-wrap: wrap; */
 }
 
 .fReview p {
     text-wrap: wrap;
+}
+
+.inner-card{
+    position: absolute;
+    padding: 5px;
 }
 
 
