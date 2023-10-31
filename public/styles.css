@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}.
+
+body {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.top-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f38b4b;
+    color: black;
+    padding: 0 40px 5px 20px;
+}
+
+.top-page a {
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+}
+
+h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 50px 0 0;
+    background-color: #5d0101;
+}
+
+.side-bar{
+    width: 50%;
+}
+
+.card{
+    /* display: flex; */
+    position: absolute;
+    width: 30%;
+    background-color: #f38b4b;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.hero img{
+    width: 70%;
+    /* padding-top: 10px; */
+}
+
+select{
+    /* appearance: none; */
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    width: 40%;
+    position: absolute;
+    float: left;
+}
+
+input{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+#submit-btn{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.financial-news{
+    position: absolute;
+    margin-top: 300px;
+    padding: 20px;
+    background-color: #f38b4b;
+}
+
+.bottom-right{
+    height: 18%;
+    min-width: 20px;
+    /* position: absolute; */
+    margin-top: 550px;
+    padding: 20px;
+    background-color: #f38b4b;
+}
+
+/* Media query to adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      width: 90%;
+    }
+}

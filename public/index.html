@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
+    <link rel="icon" class="icon>" href="./assets/icon.svg">
+    <title>MoneyFlip</title>
+</head>
+<body>
+    <div class="top-page">
+        <h1>MoneyFlip</h1>
+        <div class="dateTime"><h4>10:00AM</h4></div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">History</a>
+            <a href="#">Currency Lookup</a>
+            <a href="#">Financial Advice</a>
+            <a href="#">Reviews</a>
+        </div>
+    </div>
+
+    <!-- The hero section -->
+    <div class="hero">
+        <img src="./assets/1 - REBUILD THE ECONOMY.svg" alt="rebuilding economy" srcset="">
+        
+        <div class="side-bar">
+
+            <!-- Individual card -->
+            <div class="card" id="card1">
+                <h1>Currency Converter</h1><br>
+                <form action="" id="convert-form">
+                    <div class="base-content">
+                        <!-- <label for="baseCurrency">From</label> -->
+                        <select name="baseCurrency" id="baseCurrency">
+                            <option value="USD">US Dollar</option>
+                            <option value="EUR">Euro</option>
+                        </select>
+                        <input type="text"placeholder="From">
+                    </div>
+                    <br>
+                    
+                    <div class="base-content">
+                        <!-- <label for="targetCurrency">To</label> -->
+                        <select name="targetCurrency" id="baseCurrency">
+                            <option value="USD">US Dollar</option>
+                            <option value="EUR">Euro</option>
+                        </select>
+                        <input type="text" placeholder="To">
+                    </div>
+                    
+                </form>
+                <button id="submit-btn" type="submit">Convert</button>
+            </div>
+            <div class="financial-news">
+                <h1>Financial News</h1>
+                <div class="news-body">
+                    <textarea name="financial news" id="" cols="56" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="bottom-right">
+                <h1>Other News</h1>
+                <div class="news-body"></div>
+            </div>
+
+            
+        </div>
+    
+    </div>
+    
+</body>
+</html>
