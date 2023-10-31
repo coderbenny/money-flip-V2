@@ -85,12 +85,40 @@ input{
 }
 
 .bottom-right{
-    height: 18%;
-    min-width: 20px;
+    height: 17%;
+    width: 473px;
+    min-width: 30px;
     /* position: absolute; */
     margin-top: 550px;
     padding: 20px;
     background-color: #f38b4b;
+}
+
+.live-rates{
+    display: flex;
+    background-color: #eee1d7;
+    padding: 20px;
+}
+
+.news-card{ 
+    /* background-color: #eee1d7; */
+}
+
+table{
+    padding: 20px;
+    background-color: #fd9c00;
+    border: none;
+}
+
+th{
+    font-style: bold;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+td{
+    padding: 10px 50px 0 10px;
+    /* margin-right: 20px; */
 }
 
 /* Media query to adjust styles for smaller screens */
