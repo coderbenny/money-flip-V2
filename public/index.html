@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
     <link rel="icon" class="icon>" href="./assets/icon.svg">
     <title>MoneyFlip</title>
 </head>
+
 <body>
     <div class="top-page">
         <h1>MoneyFlip</h1>
-        <div class="dateTime"><h4>10:00AM</h4></div>
+        <div class="dateTime">
+            <h4>10:00AM</h4>
+        </div>
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">History</a>
@@ -24,7 +28,7 @@
     <!-- section one -->
     <div class="hero">
         <img src="./assets/1 - REBUILD THE ECONOMY.svg" alt="rebuilding economy" srcset="">
-        
+
         <div class="side-bar">
 
             <!-- Individual card -->
@@ -37,10 +41,10 @@
                             <option value="USD">US Dollar</option>
                             <option value="EUR">Euro</option>
                         </select>
-                        <input type="text"placeholder="From">
+                        <input type="text" placeholder="From">
                     </div>
                     <br>
-                    
+
                     <div class="base-content">
                         <!-- <label for="targetCurrency">To</label> -->
                         <select name="targetCurrency" id="baseCurrency">
@@ -49,7 +53,7 @@
                         </select>
                         <input type="text" placeholder="To">
                     </div>
-                    
+
                 </form>
                 <button id="submit-btn" type="submit">Convert</button>
             </div>
@@ -64,49 +68,95 @@
                 <h1>Other News</h1>
                 <div class="news-body"></div>
             </div>
-            
+
         </div>
 
-        
+
     </div>
 
     <!-- section two -->
-    <div class="hero">
+    <div class="-two">
         <!-- <img src="./assets/1 - REBUILD THE ECONOMY.svg" alt="rebuilding economy" srcset=""> -->
-        
-        <div class="live-rates">
 
-            <!-- Individual card -->
+        <div class="live-rates">
+            <h1>Live Exchange Rates</h1><br>
+            <p>Last Updated:</p>
+
+            <!-- Tables Container -->
             <div class="news-card" id="latest-news">
-                <h1>Live Exchange Rates</h1><br>
-                
-                <!-- Table Container -->
-                <div class="table-container">
-                    <!-- Row Content -->
-                    <div class="row">
-                        <div class="cell">
-                            <strong>Currency</strong>
-                        </div>
-                        <div class="cell">
-                            <strong>Amount</strong>
-                        </div>
-                        <div class="cell">
-                            <strong>Change (24h)</strong>
-                        </div>
-                    </div>
+            
+                <div class="first-currency">
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th>Amount</th>
+                                <th>Exchange</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>10.00</td>
+                                <td>-12%</td>
+                            </tr>
+                            <tr>
+                                <td>EURO</td>
+                                <td>20.00</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <td>AUD</td>
+                                <td>34.06</td>
+                                <td>34%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 
+
+                <div class="second-currency">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th>Amount</th>
+                                <th>Exchange</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>10.00</td>
+                                <td>-12%</td>
+                            </tr>
+                            <tr>
+                                <td>EURO</td>
+                                <td>20.00</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <td>AUD</td>
+                                <td>34.06</td>
+                                <td>34%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
             </div>
-            
+
+           
         </div>
 
-        
+
     </div>
 
     <!-- section three-->
     <div class="hero">
         <img src="./assets/1 - REBUILD THE ECONOMY.svg" alt="rebuilding economy" srcset="">
-        
+
         <div class="side-bar">
 
             <!-- Individual card -->
@@ -119,10 +169,10 @@
                             <option value="USD">US Dollar</option>
                             <option value="EUR">Euro</option>
                         </select>
-                        <input type="text"placeholder="From">
+                        <input type="text" placeholder="From">
                     </div>
                     <br>
-                    
+
                     <div class="base-content">
                         <!-- <label for="targetCurrency">To</label> -->
                         <select name="targetCurrency" id="baseCurrency">
@@ -131,7 +181,7 @@
                         </select>
                         <input type="text" placeholder="To">
                     </div>
-                    
+
                 </form>
                 <button id="submit-btn" type="submit">Convert</button>
             </div>
@@ -146,12 +196,13 @@
                 <h1>Other News</h1>
                 <div class="news-body"></div>
             </div>
-            
+
         </div>
 
-        
+
     </div>
-    
-   
+
+
 </body>
+
 </html>

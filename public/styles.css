@@ -4,7 +4,7 @@
 }.
 
 body {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -28,7 +28,7 @@ h4{
     text-align: center;
 }
 
-.hero{
+.hero, .hero-two{
     display: flex;
     justify-content: space-around;
     padding: 10px 50px 0 0;
@@ -95,31 +95,35 @@ input{
 }
 
 .live-rates{
-    display: flex;
-    background-color: #eee1d7;
-    padding: 20px;
-}
-
-.news-card{ 
+    background-image: url(./assets/shubham-s-web3-Vtm64FggqeQ-unsplash.svg);
+    background-position: center;
+    background-size: cover;
     /* background-color: #eee1d7; */
-}
+    padding: 20px;
 
 table{
     padding: 20px;
     background-color: #fd9c00;
-    border: none;
 }
 
-th{
-    font-style: bold;
-    font-size: 25px;
-    padding-left: 10px;
+.news-card{ 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #eee1d7;
 }
 
-td{
-    padding: 10px 50px 0 10px;
-    /* margin-right: 20px; */
+.first-currency{
+    margin-right: 20px;
 }
+
+table{
+    font-size: 20px;
+}
+tr{
+    background-color: white;
+}
+
 
 /* Media query to adjust styles for smaller screens */
 @media screen and (max-width: 768px) {
