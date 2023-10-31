@@ -44,15 +44,16 @@ h4 {
 .card {
     /* display: flex; */
     position: absolute;
-    width: 30%;
+    width: 35%;
     background-color: #f38b4b;
     padding: 20px;
     margin-top: 50px;
 }
 
 .hero img {
-    width: 70%;
+    width: 60%;
     /* padding-top: 10px; */
+    margin: 0;
 }
 
 select {
@@ -81,8 +82,9 @@ input {
 
 .financial-news {
     position: absolute;
-    margin-top: 300px;
+    margin-top: 320px;
     padding: 20px;
+    width: 35%;
     background-color: #f38b4b;
 }
 
