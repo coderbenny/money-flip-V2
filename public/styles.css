@@ -51,7 +51,7 @@ h4 {
     width: 35%;
     background-color: #f38b4b;
     padding: 5px 10px 15px 10px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .hero img {
@@ -89,12 +89,12 @@ input {
     margin-top: 330px;
     padding: 10px;
     width: 35%;
-    height: 325px;
+    height: 280px;
     background-color: #f38b4b;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
 }
-
 
 .single-card{
     background-color: white;
@@ -118,14 +118,12 @@ input {
     background-size: cover;
     /* background-color: #eee1d7; */
     padding: 50px;
+    height: 700px;
 }
 
 .news-card {
     display: flex;
-    /* justify-content: space-between; */
-    flex-direction: row;
-    /* background-color: #eee1d7; */
-    padding-left: 0;
+    justify-content: center;
 }
 
 p {
@@ -153,6 +151,40 @@ td {
     padding: 10px;
 }
 
+.scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    animation: scrolling 15s linear infinite;  
+}
+
+.scrolling-text p{
+    color: black;
+    padding: 10px;
+    margin: 0;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+p {
+    color: #fff; 
+    font-size: 20px; 
+    margin: 0;
+    padding: 10px;
+}
+
+
 .useful-links{
     list-style-type: none;
     padding: 10px;
@@ -163,11 +195,6 @@ td {
 .useful-links a{
     text-decoration: none;
     color: #fd9c00;
-}
-.form-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .form{
