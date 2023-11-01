@@ -19,7 +19,7 @@
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">Live Exchange</a>
-            <a href="#">Reviews</a>
+            <a href="#">Review</a>
             <a href="#">Useful Links</a>
         </div>
     </div>
@@ -56,12 +56,19 @@
                 </form>
                 
             </div>
-            <div class="financial-news">
-                <h1 style="margin: 0;">Financial News</h1>
+            <div class="exchange-history">
+                <h1 style="margin: 0;">Exchange History</h1>
                 <div class="news-body">
-                    <div class="single-card"></div>
-                    <div class="single-card"></div>
-                    <div class="single-card"></div>
+                    <div class="single-card">
+                        <form action="">
+                            <label for="date">Date</label>
+                            <input type="date" name="exchange-date" id="exchange-date">
+                            <label for="base">Currency</label>
+                            <input type="text" placeholder="Enter The Currency abbreviation ">
+                            <button id="search-history">Search</button>
+                        </form>
+                        <div class="history"></div>
+                    </div>
                 </div>
                 
             </div>

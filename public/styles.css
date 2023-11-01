@@ -85,7 +85,7 @@ input {
     font-size: 15px;
 }
 
-.financial-news {
+.exchange-history {
     position: absolute;
     margin-top: 330px;
     padding: 10px;
@@ -98,10 +98,6 @@ input {
 }
 
 .single-card{
-    background-color: white;
-    width: 170px;
-    height: 200px;
-    border: 1px solid black;
     border-radius: 10px;
 }
 
