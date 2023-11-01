@@ -4,3 +4,4 @@
 
 ### Program Description: This simple web application, a Currency Converter Website, will allow users to convert currency from one currency to another. Additionally, the website will display a list of currency exchange rates above the main conversion interface.
 
+### Features: Currency Converter, Exchange History Viewer, Live Exchange Rates, Feedback Form and a useful Links section 
