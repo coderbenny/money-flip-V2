@@ -3,8 +3,8 @@
     margin: 0;
 }
 
-. body {
-    font-size: 18px;
+body {
+    font-size: 17px;
     line-height: 1.6;
 }
 
@@ -14,13 +14,17 @@
     align-items: center;
     background-color: #f38b4b;
     color: black;
-    padding: 0 40px 5px 20px;
+    padding: 0 40px 0 20px;
 }
 
 .top-page a {
     text-decoration: none;
     color: black;
     margin-right: 70px;
+}
+
+.top-page a:hover{
+    color: #ffffff;
 }
 
 h4 {
@@ -46,7 +50,7 @@ h4 {
     position: absolute;
     width: 35%;
     background-color: #f38b4b;
-    padding: 20px;
+    padding: 5px 10px 15px 10px;
     margin-top: 50px;
 }
 
@@ -82,20 +86,30 @@ input {
 
 .financial-news {
     position: absolute;
-    margin-top: 320px;
-    padding: 20px;
+    margin-top: 330px;
+    padding: 10px;
     width: 35%;
+    height: 325px;
     background-color: #f38b4b;
+    display: flex;
+    flex-direction: column;
 }
 
-.bottom-right {
-    height: 17%;
-    width: 473px;
-    min-width: 30px;
-    /* position: absolute; */
-    margin-top: 550px;
-    padding: 20px;
-    background-color: #f38b4b;
+
+.single-card{
+    background-color: white;
+    width: 170px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.news-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid white; */
 }
 
 .live-rates {
