@@ -1,13 +1,42 @@
 const apiKey = '92b9cff50c9745fc9fc4212793f6ac5a'
 const baseCurrencySelect = document.querySelector('#baseCurrency')
+const baseCurrencyInput = document.querySelector('#baseInput')
 const targetCurrencySelect = document.querySelector('#targetCurrency')
-const targetCurrencyInput = document.querySelector('target')
+const targetCurrencyInput = document.querySelector('#targetInput')
+const baseCurrency = baseCurrencySelect.value
+const targetCurrency = targetCurrencySelect.value
+
+// console.log(baseValue)
+
+// Define The Form
+const form = document.querySelector('form#convert-form')
 
 
-// Function for Loading default currency converter values 
+// What Happens after the form submits
+form.addEventListener('submit', (event)=> {
+    event.preventDefault()
+    const formData = event.target
+    let baseCurrency = baseCurrencySelect.value
+    let targetCurrency = targetCurrencySelect.value
+    const baseAmount = baseCurrencyInput.value
+    // console.log(baseCurrency)
+
+    fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
+    .then(response => response.json())
+    .then(data =>{
+        getExchange(data)
+    })
+    .catch(error => console.error('Error Occured!:', error))
+
+})
+// console.log(form)
+
+// Function for Rendering default currency converter values 
 function getExchange(data){
-    const exchange = data.exchange_rates
-    console.log(exchange[0])
+    let target = targetCurrencySelect.value 
+    const exchange = (data.exchange_rates[`${target}`]).toFixed(2)
+    targetCurrencyInput.value = exchange
+    // console.log(exchange)
     
 }
 
@@ -15,18 +44,17 @@ function getExchange(data){
 function initialize(){
     baseCurrencySelect.selectedIndex = 0;
     targetCurrencySelect.selectedIndex = 1;
-    const baseCurrency = baseCurrencySelect.value
-    const targetCurrency = targetCurrencySelect.value
+    
 
 
-    fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
-    .then(response => response.json())
-    .then(data => {
-        getExchange(data)
-    })
-    .catch(error => {
-        console.error('Error occured:', error)
-    })
+    // fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
+    // .then(response => response.json())
+    // .then(data => {
+    //     getExchange(data)
+    // })
+    // .catch(error => {
+    //     console.error('Error occured:', error)
+    // })
 }
 
 
