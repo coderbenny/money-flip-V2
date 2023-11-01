@@ -56,16 +56,23 @@
                 </form>
                 
             </div>
-            <div class="exchange-history">
+            <div class="exchange-container">
                 <h1 style="margin: 0;">Exchange History</h1>
-                <div class="news-body">
+                <div class="exchange-history">
                     <div class="single-card">
                         <form action="">
-                            <label for="date">Date</label>
-                            <input type="date" name="exchange-date" id="exchange-date">
-                            <label for="base">Currency</label>
-                            <input type="text" placeholder="Enter The Currency abbreviation ">
-                            <button id="search-history">Search</button>
+                            <div class="exchange-header">
+                                <h1 style="font-size: 30px;">Exchange History</h1>
+                            </div>
+                            <div class="date">
+                                <label for="date">Date</label>
+                                <input type="date" name="exchange-date" id="exchange-date">
+                            </div>
+                            <div class="currency">
+                                <label for="base">Currency</label>
+                                <input type="text">
+                            </div>
+                            <button class="search-history" id="search-history">Search</button>
                         </form>
                         <div class="history"></div>
                     </div>
