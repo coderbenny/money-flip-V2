@@ -207,21 +207,20 @@ form #review{
 }
 
 .fReview{
-    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
     background-color: black;
     color: white;
     padding: 20px;
+    /* margin: 0; */
     /* margin-bottom: 20px;*/
     margin-left: 50px; 
-}
-
-.fReview p {
-    text-wrap: wrap;
 }
 
 .inner-card{
     position: absolute;
     padding: 5px;
+    margin-top: 20px;
 }
 
 
