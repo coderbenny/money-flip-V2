@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -141,6 +142,12 @@ table {
 .second-currency {
     margin-right: 40px;
     margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+}
+
+.first-currency:hover, .second-currency:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
 }
 
 table {
@@ -223,14 +230,32 @@ h2{
 }
 
 .form-div{
+    display: flex;
+    flex-direction: column;
     padding: 50px;
     background-color: #5d0101;
     color: #f38b4b;
     
 }
 
+.feedback-header{
+    line-height: 0.5;
+    margin-bottom: 50px;
+}
+
+.feedback-header p{
+    margin: 0;
+}
+
 .form-div h2{
     margin: 0;
+}
+
+.form-div input{
+    text-align: left;
+    font: inherit;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .feedback-textarea{
@@ -245,7 +270,8 @@ h2{
 }
 
 
-/* Media query to adjust styles for smaller screens */
+
+/* Media query to adjust styles for smaller screens*/
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px;
@@ -255,3 +281,4 @@ h2{
         width: 90%;
     }
 }
+

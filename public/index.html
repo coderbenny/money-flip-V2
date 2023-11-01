@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Page header -->
     <div class="top-page">
         <h1>MoneyFlip</h1>
         <div class="dateTime">
@@ -26,7 +26,7 @@
 
     <!-- section one -->
     <div class="hero">
-        <img src="./assets/1 - REBUILD THE ECONOMY.svg" alt="rebuilding economy" srcset="">
+        <img src="./assets/1 - REBUILD THE ECONOMY.svg" alt="rebuilding economy">
 
         <div class="side-bar">
 
@@ -212,19 +212,21 @@
     
     <!-- section three-->
     <div class="section-three">
-        <img src="/public/assets/3 - JOB LOOKING.svg" alt="sending review" width="750px">
+        <img src="/public/assets/3 - JOB LOOKING.svg" alt="sending review" width="850px">
         <div class="feedback">
-            
             <div class="form-div">
-                <h2>Feedback Form</h2>
+                <div class="feedback-header">
+                    <h2>Feedback Form</h2>
+                    <p>Feel free to type in some feedback about this website.</p>
+                </div>
                 <form action="">
                     <label for="fname">Name</label>
-                    <input type="text" name="fname" id="fname">
+                    <input type="text" name="fname" id="fname" placeholder="Type your name...">
                     <label for="fname">Email</label>
-                    <input type="text" name="email" id="email">
+                    <input type="email" name="email" id="email" placeholder="Type your email...">
                     <div class="feedback-textarea">
                         <label for="fname">Feedback</label>
-                        <textarea name="feedback" id="feedback" cols="55" rows="10"></textarea>
+                        <textarea name="feedback" id="feedback" cols="55" rows="7" placeholder="Type your feedback in here..." style="font: inherit;"></textarea>
                     </div>
                     <button id="submitBtn" class="submitBtn">Submit</button>
                 </form>
