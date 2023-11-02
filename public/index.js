@@ -5,12 +5,10 @@ const targetCurrencySelect = document.querySelector('#targetCurrency')
 const targetCurrencyInput = document.querySelector('#targetInput')
 const baseCurrency = baseCurrencySelect.value
 const targetCurrency = targetCurrencySelect.value
-
 // console.log(baseValue)
 
 // Define The Form
 const form = document.querySelector('form#convert-form')
-
 
 // What Happens after the form submits
 form.addEventListener('submit', (event)=> {
@@ -21,12 +19,12 @@ form.addEventListener('submit', (event)=> {
     const baseAmount = baseCurrencyInput.value
     // console.log(baseCurrency)
 
-    fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
-    .then(response => response.json())
-    .then(data =>{
-        getExchange(data)
-    })
-    .catch(error => console.error('Error Occured!:', error))
+    // fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
+    // .then(response => response.json())
+    // .then(data =>{
+    //     getExchange(data)
+    // })
+    // .catch(error => console.error('Error Occured!:', error))
 
 })
 // console.log(form)
@@ -57,6 +55,15 @@ function initialize(){
     // })
 }
 
+// Define review form 
+const feedbackForm = document.querySelector('#feedback-form')
+// console.log(feedbackForm) 
+
+
+function submitReview(event){
+    let formData = event.target
+    console.log(formData)
+}
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
