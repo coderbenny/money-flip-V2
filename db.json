@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "chris",
+            "email": "chris@chris.com",
+            "review": "I love the features"
+        },
+        {
+            "id": 2,
+            "name": "jane",
+            "email": "jane@jane.com",
+            "review": "The currency converter feature works perfect"
+        }
+    ]
+}

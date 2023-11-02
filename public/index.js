@@ -59,6 +59,20 @@ function initialize(){
 const feedbackForm = document.querySelector('#feedback-form')
 // console.log(feedbackForm) 
 
+// Event Listener For the Feedback Form
+feedbackForm.addEventListener('submit', (event)=>{
+    event.preventDefault()
+    const name = feedbackForm.querySelector('#fname').value
+    const email = feedbackForm.querySelector('#email').value
+    const feedback = feedbackForm.querySelector('#feedback').value
+    // console.log(`Name: ${name}, Email: ${email}, Feedback: ${feedback}`)
+
+    // const userFeedback = {
+    //     name: ,
+    //     email: ,
+    //     feedback: ,
+    // }
+}) 
 
 function submitReview(event){
     let formData = event.target
