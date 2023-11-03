@@ -117,13 +117,15 @@ input {
     margin-bottom: 10px;
 }
 
-.date input, .currency input{
+.date input, .currency select{
     padding: 5px;
 }
 
 .date label, .currency label{
     position: absolute;
     padding-left: 10px;
+}.currency select{
+    text-align: right;
 }
 
 .history{
