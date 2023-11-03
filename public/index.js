@@ -94,14 +94,23 @@ function displaySuccessMessage(){
     }, 3000)
 }
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    // Page Top Navigation
-    const landingPage = document.querySelector('#landing-section')
-    const livePage = document.querySelector('#section-live')
-    const feedbackPage = document.querySelector('#section-feedback')
-    const linksPage = document.querySelector('#section-links')
-    console.log(landingPage)
+// Page Top Navigation
+const navLinks = document.querySelector('.nav').children
+// console.log(navLinks)
 
+for (const navLink of navLinks){
+    navLink.addEventListener('click', (event)=>{
+        const sectionId = navLink.id
+        console.log(sectionId)
+        
+        if (sectionId){
+            document.querySelector(`${sectionId}`).scrollIntoView({behavior: 'smooth'})
+        }
+    })
+}
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    
     initialize()
 
 
