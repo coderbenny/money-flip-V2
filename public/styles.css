@@ -87,7 +87,7 @@ input {
 
 .exchange-history {
     position: absolute;
-    margin-top: 330px;
+    margin-top: 260px;
     padding: 10px;
     width: 35%;
     height: 280px;
@@ -108,7 +108,7 @@ input {
     flex-direction: row;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     position: absolute;
 }
 
@@ -128,9 +128,9 @@ input {
 
 .history{
     width: 270px;
-    height: 190px;
+    height: 230px;
     margin-left: 40px;
-    margin-top: 50px;
+    margin-top: 10px;
     background-color: white;
 }
 
@@ -302,7 +302,6 @@ h2{
 }
 
 
-
 /* Media query to adjust styles for smaller screens*/
 @media screen and (max-width: 768px) {
     body {
@@ -311,6 +310,39 @@ h2{
 
     .container {
         width: 90%;
+    }
+
+    .top-page {
+        padding: 10px 20px;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .nav.active ul {
+        display: flex;
+        flex-direction: column;
+        background: #f38b4b;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav.active ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav.active {
+        width: 100%;
+    }
+
+    .mobile-nav {
+        display: block;
+        cursor: pointer;
     }
 }
 

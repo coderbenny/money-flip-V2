@@ -55,29 +55,47 @@ function initialize(){
     // })
 }
 
-// Define review form 
+// Define Feedback Form 
 const feedbackForm = document.querySelector('#feedback-form')
 // console.log(feedbackForm) 
 
 // Event Listener For the Feedback Form
 feedbackForm.addEventListener('submit', (event)=>{
     event.preventDefault()
+    const api_url = 'https://my-json-server.typicode.com/coderbenny/fake-database/users'
+    
     const name = feedbackForm.querySelector('#fname').value
     const email = feedbackForm.querySelector('#email').value
     const feedback = feedbackForm.querySelector('#feedback').value
     // console.log(`Name: ${name}, Email: ${email}, Feedback: ${feedback}`)
 
-    // const userFeedback = {
-    //     name: ,
-    //     email: ,
-    //     feedback: ,
-    // }
+    // Assign the name, email and feedback variables to an object
+    const userFeedback = {
+        name: name,
+        email: email,
+        feedback: feedback,
+    }
+
+    form.reset()
+
+    fetch(api_url, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userFeedback)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => console.error('Error:', error))
 }) 
 
-function submitReview(event){
-    let formData = event.target
-    console.log(formData)
-}
+// function submitReview(event){
+//     let formData = event.target
+//     console.log(formData)
+// }
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
