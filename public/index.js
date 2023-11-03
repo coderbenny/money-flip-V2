@@ -62,7 +62,7 @@ const feedbackForm = document.querySelector('#feedback-form')
 // Event Listener For the Feedback Form
 feedbackForm.addEventListener('submit', (event)=>{
     event.preventDefault()
-    const api_url = 'https://my-json-server.typicode.com/coderbenny/fake-database/users'
+    const api_url = 'https://my-json-server.typicode.com/coderbenny/phase1-project/users'
     
     const name = feedbackForm.querySelector('#fname').value
     const email = feedbackForm.querySelector('#email').value
@@ -86,12 +86,24 @@ feedbackForm.addEventListener('submit', (event)=>{
     .then(response => response.json())
     .then(data => {
         console.log(data)
+        feedbackForm.reset()
+        displaySuccessMessage()
     })
     .catch(error => console.error('Error:', error))
-
-    feedbackForm.reset()
 }) 
 
+// Function for Displaying Success Message
+function displaySuccessMessage(){
+    const successMessage = document.createElement('div')
+    successMessage.innerHTML = '<h2>Feedback Submitted!</h2>'
+
+    successMessage.className = 'success-message'
+    feedbackForm.appendChild(successMessage)
+
+    setTimeout(()=>{
+        feedbackForm.removeChild(successMessage)
+    }, 3000)
+}
 
 // function submitReview(event){
 //     let formData = event.target

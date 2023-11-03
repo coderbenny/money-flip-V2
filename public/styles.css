@@ -255,6 +255,12 @@ p {
     align-items: flex-start; */
 }
 
+.success-message{
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: -60px;
+}
+
 h2{
     font-size: 30px;
     margin-left: 20px;
