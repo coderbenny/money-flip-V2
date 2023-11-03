@@ -42,17 +42,6 @@ function getExchange(data){
 function initialize(){
     baseCurrencySelect.selectedIndex = 0;
     targetCurrencySelect.selectedIndex = 1;
-    
-
-
-    // fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
-    // .then(response => response.json())
-    // .then(data => {
-    //     getExchange(data)
-    // })
-    // .catch(error => {
-    //     console.error('Error occured:', error)
-    // })
 }
 
 // Define Feedback Form 
@@ -105,12 +94,15 @@ function displaySuccessMessage(){
     }, 3000)
 }
 
-// function submitReview(event){
-//     let formData = event.target
-//     console.log(formData)
-// }
-
-
 document.addEventListener('DOMContentLoaded', ()=> {
+    // Page Top Navigation
+    const landingPage = document.querySelector('#landing-section')
+    const livePage = document.querySelector('#section-live')
+    const feedbackPage = document.querySelector('#section-feedback')
+    const linksPage = document.querySelector('#section-links')
+    console.log(landingPage)
+
     initialize()
+
+
 })
