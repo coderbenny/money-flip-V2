@@ -53,6 +53,7 @@ h4 {
     background-color: #f38b4b;
     padding: 5px 10px 15px 10px;
     margin-top: 30px;
+    border-radius: 5px;
 }
 
 .hero img {
@@ -112,20 +113,33 @@ input {
     position: absolute;
 }
 
-.date, .currency{
+.date{
     display: flex;
     margin-bottom: 10px;
 }
 
-.date input, .currency select{
+.date input{
     padding: 5px;
 }
 
 .date label, .currency label{
     position: absolute;
     padding-left: 10px;
-}.currency select{
+}
+
+.currency{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.currency select{
     text-align: right;
+}
+
+.currency label{
+    background-color: white;
+    width: 220px;
 }
 
 .history{
@@ -139,6 +153,7 @@ input {
 
 #search-history{
     padding: 8px 15px;
+    margin-top: 20px;
 }
 
 #history-table{
@@ -149,14 +164,13 @@ input {
 
 .history-head{
     display: flex;
-    justify-content: space-between;
-    margin-right: 100px;
-    align-items: center;
+    width: 100%;
+    background-color: #5D0101;
 }
 
-
-#history-table thead, tbody{
-    margin-right: 100px;
+.history-head h4{
+    margin-left: 60px;
+    color: white;
 }
 
 .news-body{
@@ -294,6 +308,7 @@ h2{
     padding: 50px;
     background-color: #5d0101;
     color: #f38b4b;
+    border-radius: 5px;
     
 }
 
