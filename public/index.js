@@ -88,9 +88,11 @@ feedbackForm.addEventListener('submit', (event)=>{
         console.log(data)
     })
     .catch(error => console.error('Error:', error))
+
+    feedbackForm.reset()
 }) 
 
-form.reset()
+
 // function submitReview(event){
 //     let formData = event.target
 //     console.log(formData)

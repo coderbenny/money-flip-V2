@@ -18,9 +18,11 @@
             "email": "dollie@dolie.com",
             "review": "The layout of the website is fantastic"
         },
+        {
             "id": 4,
             "name": "michael",
             "email": "michael@michael.com",
             "review": "The footer of the website is wonderful"
+        }
     ]
 }
