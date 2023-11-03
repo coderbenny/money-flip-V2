@@ -8,10 +8,10 @@ const targetCurrency = targetCurrencySelect.value
 // console.log(baseValue)
 
 // Define The Form
-const form = document.querySelector('form#convert-form')
+const convertForm = document.querySelector('form#convert-form')
 
 // What Happens after the form submits
-form.addEventListener('submit', (event)=> {
+convertForm.addEventListener('submit', (event)=> {
     event.preventDefault()
     const formData = event.target
     let baseCurrency = baseCurrencySelect.value
@@ -19,12 +19,12 @@ form.addEventListener('submit', (event)=> {
     const baseAmount = baseCurrencyInput.value
     // console.log(baseCurrency)
 
-    // fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
-    // .then(response => response.json())
-    // .then(data =>{
-    //     getExchange(data)
-    // })
-    // .catch(error => console.error('Error Occured!:', error))
+    fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
+    .then(response => response.json())
+    .then(data =>{
+        getExchange(data)
+    })
+    .catch(error => console.error('Error Occured!:', error))
 
 })
 // console.log(form)
