@@ -76,8 +76,6 @@ feedbackForm.addEventListener('submit', (event)=>{
         feedback: feedback,
     }
 
-    form.reset()
-
     fetch(api_url, {
         method: 'POST',
         headers: {
@@ -92,6 +90,7 @@ feedbackForm.addEventListener('submit', (event)=>{
     .catch(error => console.error('Error:', error))
 }) 
 
+form.reset()
 // function submitReview(event){
 //     let formData = event.target
 //     console.log(formData)
