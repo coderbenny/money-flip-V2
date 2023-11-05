@@ -40,8 +40,10 @@ function getExchange(data){
 
 // initializing function
 // function initialize(){
-//     baseCurrencySelect.selectedIndex = 0;
-//     targetCurrencySelect.selectedIndex = 1;
+    // baseCurrencySelect.selectedIndex = 0;
+    // targetCurrencySelect.selectedIndex = 3;
+
+
 // }
 
 // Define Feedback Form 
@@ -172,16 +174,26 @@ historyForm.addEventListener('submit', (event)=>{
     event.preventDefault()
     const refDate = historyForm.querySelector('#exchange-date').value
     const refCurrency  = historyForm.querySelector('#lookup-currency').value
-    // console.log(refCurrency)
+    const historyHeading = document.querySelector('.history-head').textContent
+    // console.log(historyHeading)
 
-
+    //Displaying History results in the History Div
+    // function displayHistory(data){
+    //     console.log(data)
+    //     const base = document.createElement('h3') 
+    //     const baseID = data.base
+    //     base.textContent = baseID    
+    //     historyHeading.appendChild(base)
+    // }
 
     fetch(`https://exchange-rates.abstractapi.com/v1/historical/?api_key=${apiKey}&base=${refCurrency}&date=${refDate}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            displayHistory(data)
         })
         .catch(error => console.error('An error occured:', error))
+    
+    historyForm.reset()
 })
 
 
