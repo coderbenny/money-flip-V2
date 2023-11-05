@@ -165,12 +165,30 @@ function addCurrencyOptions(){
     })
 }
 
+// EventListener for Currency History Form
+const historyForm = document.querySelector('#history-form')
+
+historyForm.addEventListener('submit', (event)=>{
+    event.preventDefault()
+    const refDate = historyForm.querySelector('#exchange-date').value
+    const refCurrency  = historyForm.querySelector('#lookup-currency').value
+    // console.log(refCurrency)
+
+
+
+    fetch(`https://exchange-rates.abstractapi.com/v1/historical/?api_key=${apiKey}&base=${refCurrency}&date=${refDate}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => console.error('An error occured:', error))
+})
+
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
     // initialize()
-    
-    addCurrencyOptions();
 
+    addCurrencyOptions();
 
 })
