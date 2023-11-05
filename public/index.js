@@ -196,11 +196,30 @@ historyForm.addEventListener('submit', (event)=>{
     historyForm.reset()
 })
 
+// Function for Time/Date
+function displayTime(){
+    const now = new Date()
+    const timeElement = document.querySelector('.dateTime')
 
+    // Formatting the Hts, Mins & Seconds
+    const hours = String(now.getHours()).padStart(2, '0')
+    const minutes = String(now.getMinutes()).padStart(2, '0')
+    // const seconds = String(now.getSeconds()).padStart(2, '0')
+    const Day = String(now.getDay())
+    
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDay = now.toLocaleDateString('en-US', options);
+
+    timeElement.querySelector('h4').textContent = ` ${formattedDay} ${hours}:${minutes}`
+    
+}
+
+setInterval(displayTime, 1000)
 
 document.addEventListener('DOMContentLoaded', ()=> {
     // initialize()
 
     addCurrencyOptions();
+    displayTime()
 
 })
