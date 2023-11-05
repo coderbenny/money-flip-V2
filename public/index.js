@@ -39,10 +39,10 @@ function getExchange(data){
 }
 
 // initializing function
-function initialize(){
-    baseCurrencySelect.selectedIndex = 0;
-    targetCurrencySelect.selectedIndex = 1;
-}
+// function initialize(){
+//     baseCurrencySelect.selectedIndex = 0;
+//     targetCurrencySelect.selectedIndex = 1;
+// }
 
 // Define Feedback Form 
 const feedbackForm = document.querySelector('#feedback-form')
@@ -111,6 +111,7 @@ for (const navLink of navLinks){
 
 // Reference Select Elements
 const selectElements = document.querySelectorAll('select')
+
 // console.log(selectElements)
 
 function addCurrencyOptions(){
@@ -164,11 +165,12 @@ function addCurrencyOptions(){
     })
 }
 
-addCurrencyOptions();
+
 
 document.addEventListener('DOMContentLoaded', ()=> {
+    // initialize()
     
-    initialize()
+    addCurrencyOptions();
 
 
 })

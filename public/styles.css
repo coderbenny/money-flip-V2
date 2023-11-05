@@ -135,6 +135,7 @@ input {
 
 .currency select{
     text-align: right;
+    width: 220px;
 }
 
 .currency label{
