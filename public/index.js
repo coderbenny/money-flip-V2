@@ -182,12 +182,16 @@ historyForm.addEventListener('submit', (event)=>{
     function displayHistory(data){
         const historyParent = document.querySelector('.history')
         const historyHead = document.querySelector('.history-head')
-        console.log(data)
+        // console.log(data)
 
+        // Creating and styling date and base Currency
         const targetTitle = document.createElement('h3')
         const date = document.createElement('h4')
         const historyTable = document.createElement('table')
         
+
+        // historyParent.innerHTML = ''
+
         targetTitle.textContent = data.base
         targetTitle.style.marginLeft = '30px'
         targetTitle.style.color = '#f38b4b'
@@ -196,36 +200,24 @@ historyForm.addEventListener('submit', (event)=>{
 
         date.textContent = data.date
         historyHead.appendChild(date)
-        
-        
-        // historyTable.innerHTML = `
 
-        //     <thead>
-        //     <tr>
-        //         <th>Currency</th>
-        //         <th>Exchange</th>
-        //     </tr>
-        // </thead>
-        // <tbody>
-        //     <tr>
-        //         <td>EUR</td>
-        //         <td>0.837521</td>
-        //     </tr>
-        //     <tr>
-        //         <td>JPY</td>
-        //         <td>105.921273</td>
-        //     </tr>
-        //     <tr>
-        //         <td>BGN</td>
-        //         <td>1.638023</td>
-        //     </tr>
-        // </tbody>
-        // `
+        const exchangeRates = data.exchange_rates
+        // console.log(data)
 
-        // historyParent.appendChild(historyTable)
+        historyParent.style.overflow = "auto";
+        historyParent.style.maxHeight = "230px";
 
+        for (const currency in data.exchange_rates){
+            // console.log(currency)
+            const rate = data.exchange_rates[currency]
+            // console.log(rate)
+            const historyData = document.createElement('div')
+            historyData.style.marginLeft = "20px"
+            historyData.textContent = `${currency}: ${rate}`
 
-    }
+            historyParent.appendChild(historyData)
+        }
+    }        
 
     fetch(`https://exchange-rates.abstractapi.com/v1/historical/?api_key=${apiKey}&base=${refCurrency}&date=${refDate}`)
         .then(response => response.json())
