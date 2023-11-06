@@ -177,17 +177,55 @@ historyForm.addEventListener('submit', (event)=>{
     event.preventDefault()
     const refDate = historyForm.querySelector('#exchange-date').value
     const refCurrency  = historyForm.querySelector('#lookup-currency').value
-    const historyHeading = document.querySelector('.history-head').textContent
     // console.log(historyHeading)
 
-    //Displaying History results in the History Div
-    // function displayHistory(data){
-    //     console.log(data)
-    //     const base = document.createElement('h3') 
-    //     const baseID = data.base
-    //     base.textContent = baseID    
-    //     historyHeading.appendChild(base)
-    // }
+    function displayHistory(data){
+        const historyParent = document.querySelector('.history')
+        const historyHead = document.querySelector('.history-head')
+        console.log(data)
+
+        const targetTitle = document.createElement('h3')
+        const date = document.createElement('h4')
+        const historyTable = document.createElement('table')
+        
+        targetTitle.textContent = data.base
+        targetTitle.style.marginLeft = '30px'
+        targetTitle.style.color = '#f38b4b'
+        targetTitle.style.fontWeight = 'bold'
+        historyHead.appendChild(targetTitle)
+
+        date.textContent = data.date
+        historyHead.appendChild(date)
+        
+        
+        // historyTable.innerHTML = `
+
+        //     <thead>
+        //     <tr>
+        //         <th>Currency</th>
+        //         <th>Exchange</th>
+        //     </tr>
+        // </thead>
+        // <tbody>
+        //     <tr>
+        //         <td>EUR</td>
+        //         <td>0.837521</td>
+        //     </tr>
+        //     <tr>
+        //         <td>JPY</td>
+        //         <td>105.921273</td>
+        //     </tr>
+        //     <tr>
+        //         <td>BGN</td>
+        //         <td>1.638023</td>
+        //     </tr>
+        // </tbody>
+        // `
+
+        // historyParent.appendChild(historyTable)
+
+
+    }
 
     fetch(`https://exchange-rates.abstractapi.com/v1/historical/?api_key=${apiKey}&base=${refCurrency}&date=${refDate}`)
         .then(response => response.json())
