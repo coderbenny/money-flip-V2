@@ -35,26 +35,18 @@ convertForm.addEventListener('submit', (event)=> {
 function getExchange(data){
     // console.log(data)
     const converted = (data.converted_amount).toFixed(2)
-    // const target = targetCurrencySelect.value 
-    // const exchange = (data.exchange_rates[`${target}`]).toFixed(2)
     targetCurrencyInput.value = converted
 
     function clearForm(){
         convertForm.reset()
     }
-
-    setTimeout(clearForm, 5000)
-
-    // console.log(converted)
     
 }
 
 // initializing function
 // function initialize(){
-    // baseCurrencySelect.selectedIndex = 0;
-    // targetCurrencySelect.selectedIndex = 3;
-
-
+//     baseCurrencySelect.selectedIndex = 1;
+//     targetCurrencySelect.selectedIndex = 3;
 // }
 
 // Define Feedback Form 
@@ -229,7 +221,6 @@ setInterval(displayTime, 1000)
 
 document.addEventListener('DOMContentLoaded', ()=> {
     // initialize()
-
     addCurrencyOptions();
     displayTime()
 
