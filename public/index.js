@@ -7,19 +7,21 @@ const baseCurrency = baseCurrencySelect.value
 const targetCurrency = targetCurrencySelect.value
 // console.log(baseValue)
 
-// Define The Form
+// Define The Convert Form
 const convertForm = document.querySelector('form#convert-form')
 
 // What Happens after the form submits
 convertForm.addEventListener('submit', (event)=> {
     event.preventDefault()
     const formData = event.target
-    let baseCurrency = baseCurrencySelect.value
-    let targetCurrency = targetCurrencySelect.value
-    const baseAmount = baseCurrencyInput.value
-    // console.log(baseCurrency)
+    const baseCurrency = baseCurrencySelect.value
+    const targetCurrency = targetCurrencySelect.value
+    const baseAmount = baseCurrencyInput.value 
+    // console.log(baseAmount, targetCurrency, baseCurrency)
 
-    fetch(`https://exchange-rates.abstractapi.com/v1/live/?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}`)
+    const options = {method: 'GET'};
+
+    fetch(`https://exchange-rates.abstractapi.com/v1/convert?api_key=${apiKey}&base=${baseCurrency}&target=${targetCurrency}&base_amount=${baseAmount}`, options)
     .then(response => response.json())
     .then(data =>{
         getExchange(data)
@@ -31,10 +33,19 @@ convertForm.addEventListener('submit', (event)=> {
 
 // Function for Rendering default currency converter values 
 function getExchange(data){
-    let target = targetCurrencySelect.value 
-    const exchange = (data.exchange_rates[`${target}`]).toFixed(2)
-    targetCurrencyInput.value = exchange
-    // console.log(exchange)
+    // console.log(data)
+    const converted = (data.converted_amount).toFixed(2)
+    // const target = targetCurrencySelect.value 
+    // const exchange = (data.exchange_rates[`${target}`]).toFixed(2)
+    targetCurrencyInput.value = converted
+
+    function clearForm(){
+        convertForm.reset()
+    }
+
+    setTimeout(clearForm, 5000)
+
+    // console.log(converted)
     
 }
 
