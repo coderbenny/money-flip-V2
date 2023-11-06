@@ -1,4 +1,4 @@
-const apiKey = '92b9cff50c9745fc9fc4212793f6ac5a'
+const apiKey = 'a90df33a2d5e412e8703330e7ba7c513'
 const baseCurrencySelect = document.querySelector('#baseCurrency')
 const baseCurrencyInput = document.querySelector('#baseInput')
 const targetCurrencySelect = document.querySelector('#targetCurrency')
@@ -170,27 +170,24 @@ function addCurrencyOptions(){
     })
 }
 
-// EventListener for Currency History Form
+// Currency History Form
 const historyForm = document.querySelector('#history-form')
+const historyHead = document.querySelector('#history-header')
+// console.log(historyHead)
 
+// EventListener for Currency History Form
 historyForm.addEventListener('submit', (event)=>{
     event.preventDefault()
     const refDate = historyForm.querySelector('#exchange-date').value
     const refCurrency  = historyForm.querySelector('#lookup-currency').value
-    // console.log(historyHeading)
-
+    
     function displayHistory(data){
         const historyParent = document.querySelector('.history')
-        const historyHead = document.querySelector('.history-head')
-        // console.log(data)
+        historyParent.innerHTML = ''
 
         // Creating and styling date and base Currency
         const targetTitle = document.createElement('h3')
         const date = document.createElement('h4')
-        const historyTable = document.createElement('table')
-        
-
-        // historyParent.innerHTML = ''
 
         targetTitle.textContent = data.base
         targetTitle.style.marginLeft = '30px'
@@ -217,6 +214,7 @@ historyForm.addEventListener('submit', (event)=>{
 
             historyParent.appendChild(historyData)
         }
+
     }        
 
     fetch(`https://exchange-rates.abstractapi.com/v1/historical/?api_key=${apiKey}&base=${refCurrency}&date=${refDate}`)
